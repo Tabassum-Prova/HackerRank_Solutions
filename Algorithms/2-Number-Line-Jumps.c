@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main() {
 
-    int x1,v1,x2,v2,k,p=0;
+    long int x1,v1,x2,v2,k=0;
 
-    scanf("%d %d %d %d", &x1, &v1, &x2, &v2);
+    scanf("%ld%ld%ld%ld", &x1, &v1, &x2, &v2);
 
-    while(x1<10000){
+    while(x1<100000000){
         x1=x1+v1;
         x2=x2+v2;
 

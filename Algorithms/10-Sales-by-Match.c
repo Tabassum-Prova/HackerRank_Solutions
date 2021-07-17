@@ -7,14 +7,14 @@ int main(){
     for(i=0; i<n; i++) {
         scanf("%d", &j);
         arr[j]++;
-        printf("%d", arr[j]);
+        
     }
 
-    // for(i=0; i<101; i++) {
-    //     pair  += arr[i] / 2;
-    // }
+    for(i=0; i<101; i++) {
+        pair  += arr[i] / 2;
+    }
 
-    // printf("%d", pair);
+    printf("%d", pair);
 
 
     return 0;

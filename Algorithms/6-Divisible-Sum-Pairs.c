@@ -11,11 +11,10 @@ int main(){
 
     for(i=0; i<n; i++) {
         for (j=i+1; j<n; j++) {
-            if((arr[i] + arr[j]) % k == 0) {
-                count++;
-                printf("%d\n", arr[i]);
 
-                printf("%d\n", arr[j]);
+            if((arr[i] + arr[j]) % k == 0) {
+
+                count++;
             }
         }
     }
