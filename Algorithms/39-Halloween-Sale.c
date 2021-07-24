@@ -7,13 +7,16 @@ int main(){
     while(1){
 
         sum+=p;
-        int det = sum;
-        count++;
-        if(count < m){
-            p-=d;
+        if(sum<=s){
+
+            count++;
+            if(p-d>=m){
+                p-=d;
+            }else{
+                p=m;
+            }
+
         }else{
-            p=m;
-        }if(det+m>=s){
             break;
         }
 

@@ -35,6 +35,18 @@ long repeatedString(char* s, long n) {
         }
     }
 
+    long t = n / d;
+
+    long l = n - (d*t);
+    int extra = 0;
+    for(int i =0; i<l; i++){
+        if(s[i]=='a'){
+            extra++;
+        }
+    }
+    long total = (t*count)+extra;
+    return total;
+
 
 }
 

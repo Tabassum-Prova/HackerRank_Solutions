@@ -4,9 +4,7 @@ int main(){
     int i, j, t, n, arr[60];
 
     scanf("%d", &t);
-    for(i=1; i<=t; i++) {
-
-        
+    for(i=1; i<=t; i++) { 
 
         for(j=0; j<=60; j++) {
             if(j==0) {
@@ -17,11 +15,13 @@ int main(){
                 arr[j] = (arr[j-1]) +1;
             }
         }
+
         scanf("%d", &n);
+        
         for(j=0; j<=60; j++) {
             
             if(j==n) {
-                printf("%d", arr[j]);
+                printf("%d\n", arr[j]);
             }
             
             

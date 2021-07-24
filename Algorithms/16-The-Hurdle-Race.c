@@ -12,7 +12,11 @@ int main() {
         }
     }
 
-    printf("%d", max);
+    if(max < k) {
+        printf("%d", 0);
+    }else {
+        printf("%d", max-k);
+    }
 
     return 0;
 }

@@ -1,20 +1,22 @@
 #include <stdio.h>
+#include <math.h>
 int main(){
 
-    int q, a, b, i, p, total;
+    int q, i, p, total;
+    long long a,b;
     scanf("%d", &q);
 
     while(q--){
-        scanf("%d %d", &a, &b);
+        scanf("%lld %lld", &a, &b);
         total = 0;
        
-        for(i=1; i<b; i++){
+        for(i=sqrt(a); i<=sqrt(b); i++){
             p = i*i;
             if(p>=a && p<=b){
                 total++;
             }
         }
-        printf("%d",total);
+        printf("%d\n",total);
     }
 
     

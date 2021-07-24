@@ -1,35 +1,25 @@
 #include <stdio.h>
-int main(){
-
-    int b, w, bc, wc, z, t;
+int main()
+{
+    int t, i;
+    long long b, w, bc, wc, z;
     scanf("%d", &t);
+    for (i = 0; i < t; i++)
+    {
+        scanf("%lld %lld", &b, &w);
+        scanf("%lld %lld %lld", &bc, &wc, &z);
+        long long p1 = b * bc + w * wc;
+        long long p2 = b * (wc + z) + w * wc;
+        long long p3 = b * bc + w * (bc + z);
+        if (p1 < p2 && p1 < p3)
 
-    while(t--){
-        scanf("%d %d", &b, &w);
-        scanf("%d %d %d", &bc, &wc, &z);
-
-        int d=0, e=0, f=0;
-
-        if(bc==wc){
-            printf("%d\n", b*bc + w*wc);
-            printf("l");
-        }else if(b !=w && (z>bc || z>wc)){
-            printf("%d\n", b*bc + w*wc);
-
-        }else if(b!=w && bc>wc+z){
-            d=b+w;
-            printf("%d\n", d*wc+ b*z);
-            printf("p");
-        }else if(b==w && bc>wc){
-            e = wc+z;
-            printf("%d\n", b*e + w*wc);
-            printf("k");
-        }else if(b==w && wc>bc){
-            f = bc+z;
-            printf("%d\n", b*bc + w*f);
-            printf("0");
+            printf("%lld\n", p1);
+        else if (p2 < p1 && p2 < p3)
+            printf("%lld\n", p2);
+        else
+        {
+            printf("%lld\n", p3);
         }
     }
-
     return 0;
 }

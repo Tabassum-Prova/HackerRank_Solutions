@@ -22,7 +22,7 @@ int main() {
     for(i=a; i<=b; i++) {
          
         c = rev(i);
-        if((i-c) % k == 0) {
+        if(abs(i-c) % k == 0) {
             count++;
         }   
     }
