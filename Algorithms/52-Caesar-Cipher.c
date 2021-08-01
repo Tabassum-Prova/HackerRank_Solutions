@@ -1,21 +1,34 @@
 #include <stdio.h>
-int main(){
+#include <string.h>
+int main()
+{
 
-    int n, i, j;
-    char s[101];
-    int k;
-
+    int i, j, ascii, n, k;
     scanf("%d", &n);
-    scanf("%s", &s);
+    char s[n];
+    scanf("%s", s);
     scanf("%d", &k);
-    for(i=0; i<n; i++){
-        if((s[i]>=65 && s[i]<=90) || (s[i]>=97 && s[i]<=122)){
-            s[i]+=k;
-        }
-    }
+    k= k%26;
 
     for(i=0; i<n; i++){
-        printf("%s", s[i]);
+        ascii=s[i];
+        if(ascii>=97 && ascii<=122){
+            ascii=ascii+k;
+            if(ascii>122){
+                printf("%c", ascii-26);
+            }else{
+                printf("%c",ascii);
+            }
+        }else if(ascii>=65 && ascii<=90){
+            ascii=ascii+k;
+            if(ascii>90){
+                printf("%c", ascii-26);
+            }else{
+                printf("%c", ascii);
+            }   
+        }else{
+            printf("%c", ascii);
+        }
     }
 
     return 0;
